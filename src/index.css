@@ -81,3 +81,22 @@ header {
 .print > button {
     padding: 5px 20px;
 }
+
+.main-body {
+    height: calc(100vh - 60px);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.editor {
+    background-color: rgb(255, 221, 221);
+    width: 100%;;
+    height: calc(100vh - 60px);
+}
+
+.display-pdf {
+    background-color: rgb(220, 255, 220);
+    width: 100%;;
+    height: calc(100vh - 60px);
+}
