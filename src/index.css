@@ -90,7 +90,6 @@ header {
 }
 
 .editor {
-    background-color: rgb(255, 221, 221);
     width: 100%;;
     height: calc(100vh - 60px);
 }
