@@ -9,17 +9,17 @@ const Editor = ({ resume, updateData }) => {
             <form action="/" method="">
                 <div className="about-me">
                     <p>About me</p>
-                    <input onChange={(e) => updateData(resume.workExperience[0].jobTitle, e.target.value)} type="text" name="fullname" id="fullname" placeholder='Full Name'/>
+                    <input onChange={(e) => updateData("fullName", e.target.value)} type="text" name="fullname" id="fullname" placeholder='Full Name'/>
                 </div>
             </form>
         </div>
     )
 }
 
-const DisplayPdf = () => {
+const DisplayPdf = (props) => {
     return (
         <div className="display-pdf">
-
+            {JSON.stringify(props.resume)}
         </div>
     )
 }
@@ -31,20 +31,12 @@ const MainBody = () => {
         phone: "247 324-3428",
         location: "Salt Lake",
         link: "Github",
-        workExperience: [
-            {
-                companyName: "Company 1",
-                jobTitle: "CEO",
-                location: "Salt Lake",
-                duration: "Oct 2020 - Present"
-            }
-        ]
     }
     let [resume, setResume] = useState(resumeObject);
 
-    const updateData = (key, d) => {
+    const updateData = (key, property) => {
         let tmpObj = {
-            ...resumeObject, workExperience[0].jobTitle: d
+            ...resumeObject, [key]: property
         }
         setResume(tmpObj)
     }
@@ -52,7 +44,7 @@ const MainBody = () => {
     return (
         <div className="main-body">
             <Editor resume={resume} updateData={updateData}/>
-            <DisplayPdf />
+            <DisplayPdf resume={resume} />
         </div>
     )
 }
