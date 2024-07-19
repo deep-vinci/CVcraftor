@@ -99,3 +99,7 @@ header {
     width: 100%;;
     height: calc(100vh - 60px);
 }
+
+.a4-size {
+    background-color: red;
+}

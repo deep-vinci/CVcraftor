@@ -19,7 +19,9 @@ const Editor = ({ resume, updateData }) => {
 const DisplayPdf = (props) => {
     return (
         <div className="display-pdf">
-            {JSON.stringify(props.resume)}
+            <div className="a4-size">
+                
+            </div>
         </div>
     )
 }
