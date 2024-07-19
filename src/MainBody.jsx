@@ -9,7 +9,7 @@ const Editor = ({ resume, updateData }) => {
             <form action="/" method="">
                 <div className="about-me">
                     <p>About me</p>
-                    <input onChange={(e) => updateData("fullName", e.target.value)} type="text" name="fullname" id="fullname" placeholder='Full Name'/>
+                    <input onChange={(e) => updateData("email", e.target.value)} type="text" name="fullname" id="fullname" placeholder='Full Name'/>
                 </div>
             </form>
         </div>
@@ -23,10 +23,11 @@ const DisplayPdf = ({ resume }) => {
                 <div className="resume resume-header">
                     <div className="fullname">{`${resume.fullName}`}</div>
                     <div className="info">
-                        <div className="email">{resume.email}</div>
+                    {resume.email} ❖ {resume.phone} ❖ {resume.location} ❖ {resume.link}
+                        {/* <div className="email">{resume.email}</div>
                         <div className="phone">❖ {resume.phone}</div>
                         <div className="location">❖ {resume.location}</div>
-                        <div className="link">❖ {resume.link}</div>
+                        <div className="link">❖ {resume.link}</div> */}
                     </div>
                     <hr />
                 </div>
@@ -38,7 +39,7 @@ const DisplayPdf = ({ resume }) => {
 const MainBody = () => {
     let resumeObject = {
         fullName: "John McJobFace",
-        email: "johndoe@example.com",
+        email: "Johnmcjb@example.com",
         phone: "247 324-3428",
         location: "Salt Lake",
         link: "Github",
