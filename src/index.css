@@ -105,5 +105,16 @@ header {
 .a4-size {
     background-color: white;
     border: 0.5px solid black;
+    padding: 20px;
 }
 
+.resume .fullname {
+    font-size: 2rem;
+    font-weight: 600;
+}  
+
+.resume .info {
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+}

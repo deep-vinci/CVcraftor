@@ -16,11 +16,20 @@ const Editor = ({ resume, updateData }) => {
     )
 }
 
-const DisplayPdf = (props) => {
+const DisplayPdf = ({ resume }) => {
     return (
         <div className="display-pdf">
             <div className="a4-size">
-                
+                <div className="resume resume-header">
+                    <div className="fullname">{`${resume.fullName}`}</div>
+                    <div className="info">
+                        <div className="email">{resume.email}</div>
+                        <div className="phone">❖ {resume.phone}</div>
+                        <div className="location">❖ {resume.location}</div>
+                        <div className="link">❖ {resume.link}</div>
+                    </div>
+                    <hr />
+                </div>
             </div>
         </div>
     )
@@ -28,7 +37,7 @@ const DisplayPdf = (props) => {
 
 const MainBody = () => {
     let resumeObject = {
-        fullName: "John Doe",
+        fullName: "John McJobFace",
         email: "johndoe@example.com",
         phone: "247 324-3428",
         location: "Salt Lake",
