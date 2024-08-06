@@ -23,7 +23,7 @@ const DisplayPdf = ({ resume }) => {
                 <div className="resume resume-header">
                     <div className="fullname">{`${resume.fullName}`}</div>
                     <div className="info">
-                    {resume.email} ❖ {resume.phone} ❖ {resume.location} ❖ {resume.link}
+                        <p>{resume.email} ❖ {resume.phone} ❖ {resume.location} ❖ {resume.link}</p>
                         {/* <div className="email">{resume.email}</div>
                         <div className="phone">❖ {resume.phone}</div>
                         <div className="location">❖ {resume.location}</div>
